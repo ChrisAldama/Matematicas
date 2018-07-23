@@ -1,0 +1,82 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
+%opening
+\title{Actividad 2. Unidad 1}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Actividad 2. Conectivos lógicos
+\end{abstract}
+
+\section{I. Indica tu lenguaje y utiliza los conectivos lógicos para simbolizar las siguientes oraciones.}
+
+\begin{center}
+\begin{tabular}{ll}
+r & Romeo\\
+o & Romero\\
+j & Julieta\\
+\(A(x, y)\) & x ama a y\\
+\(C(x, y)\) & x se casa con y\\
+\(D(x, y)\) & x dice que ama a y\\
+\end{tabular}
+\end{center}
+
+
+\begin{itemize}
+ \item Romero no ama a Julieta. \[\neg A(o, j)\]
+ \item Romeo ama a Julieta y Julieta ama a Romeo. \[A(r, j) \land A(j, r)\]
+ \item Julieta ama a Romeo si, y sólo si, Romeo ama a Julieta. \[A(j, r) \iff A(r, j)\]
+ \item Si Julieta no ama a Romeo, entonces Romeo no se casa. \[\neg A(j,r) \to C(r, j)\]
+ \item Romeo ama a Julieta o Julieta no ama a Romeo. \[A(r,j) \lor \neg A(r,j)\]
+ \item Si Julieta ama a Romeo, entonces, él se casa con ella. Pero si Julieta no ama a Romero, entonces él no se con ella, sí y sólo si ella se lo dice(que lo ama). \[(A(j,r) \to C(r,j) ) \land ((\neg A(j, o) \to \neg C(o, j)) \iff D(j, o))\] 
+\end{itemize}
+
+\section{II. Extrae las proposiciones del siguiente texto y tradúcelo al lenguaje formal utilizando los conectivos lógicos}
+
+Precisa las letras de los predicados, de las variables y de las constantes que te sean necesarias para tradicir la parte subrayada al lenguaje formal.
+
+Hay un cartero al que muerden todos los los perros... al menos todos los perros de mi cuadra. Pero no existe, al menos en mi calle, un perro que muerda a todos los carteros.\\
+
+\(M(x, y)\): x muerde a y\\
+\(P\): perros de mi cuadra\\
+\(p\): perro\\
+\(c\): cartero
+
+\begin{enumerate}
+ \item \(\exists c \to \forall p \in P, M(p, c)\). "Hay un cartero al que muerden todos los los perros... al menos todos los perros de mi cuadra."
+ \item \(\neg \exists p \in P \to \forall c, M(p ,c)\) "Pero no existe, al menos en mi calle, un perro que muerda a todos los carteros."
+\end{enumerate}
+
+
+\section{III. Contesta lo que se te pide}
+
+\(A(x,y)\): x es amigo de y\\
+\(F(x)\): x es feliz\\
+m: María\\
+j: Juan\\
+
+\begin{enumerate}[label=(\alph*)]
+ \item \(A(m,j) \to F(m)\)\\
+       \(A(m,j) \to F(j)\)\\
+       ¿Cuál es la diferencia entre ambas oraciones?\\
+       La primer preposición se puede leer como "Si María es amiga de Juan, entonces María es feliz" esta oración, concluye que María es feliz ya que es amiga de Juan, pero no nos dice nada sobre el estado de anímo de Juan, el cual podrás estar feliz o no, sin embargo la segunda preposición "Si Juan es amigo de María, entonces Juan es feliz"auqnue similar a la primera esta solo habla de anímo de Juan.
+\item \(((A(m,j) \land F(m)) \to F(j)) \land A(j,m)\)\\
+      \((A(m,j) \land F(m)) \to (F(j) \land A(j,m))\)\\
+      ¿Cuál es la diferencia entre ambas oraciones?\\
+      Ambas proposiciones tienen una estructura muy similar, sin embargo estan agrupadas de diferente manera por parentesis haciendo que cambie el significado de estas, la primera preposición está confirmada por dos preposiciones más simples: \(((A(m,j) \land F(m)) \to F(j))\) y \(A(j,m)\) ésta primer parte implica que "Juan es feliz" a consecuencia de su amistad con María y que María misma está feliz, esta conclusión no se encuentra en la segunda preposición ya que la conclusión es un poco más compleja al anunciar que "Juan es feliz y es amigo de Maria" como consecuencia a que Maria es feliz y es amiga de Juan.
+\item \(A(m,j) \land ((A(j,m) \lor \not F(m)) \iff (F(j) \lor F(m)))\)\\
+      \(((A(m,j) \land A(j,m)) \lor \not F(m)) \iff (F(j) \lor F(m))\)\\
+      ¿Cuál es la diferencia entre ambas oraciones?
+      Iguale que en el inciso anterior ambas oraciones son similares aunque agrupadas de manera diferente por los parentesis, ya que en la primera es una preposición unida por la disyunción de dos oraciones, pero la segunda es una preposición de inferencia, así pues sus tablas de verdad son diferentes.
+\end{enumerate}
+
+
+
+
+\end{document}
