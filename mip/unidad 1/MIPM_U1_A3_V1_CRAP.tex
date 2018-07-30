@@ -1,0 +1,216 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+
+%opening
+\title{Actividad 3. Operadores proposicionales}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\section{Operadores proposicionales}
+
+Instrucciones: Analiza las siguientes proposiciones que surgen de situaciones de la vida cotidiana y utiliza las operaciones proposicionales para expresarlas en un lenguaje lógico y demuestra su valor de verdad. 
+
+\begin{enumerate}
+ \item Tengo hambre, pero si como, me va a dar sueño y si me da sueño no voy a poder estudiar y si no estudio no pasaré el examen.
+\begin{itemize}
+ \item \(p\): Yo tengo hambre.
+ \item \(q\): Yo como.
+ \item \(r\): Me da sueño.
+ \item \(s\): Voy a estudiar.
+ \item \(t\): Pasaré el examen.
+\end{itemize}
+Así la preposición en lenguaje formal es \( \{ [p \land (q \to r )] \land (r \to \neg s) \} \land (\neg s \to t) \) con la siguiente table de verdad:
+\begin{center}
+\begin{tabular}{llllllllllllllllll}
+\(p\) & \(q\) & \(r\) & \(s\) & \(t\) & \(\{[p\) & \(\land\) & \((q\) & \(\to\) & \(r)]\) & \(\land\) & \((r\) & \(\to\) & \(\neg s)\}\) & \(\land\) & \((\neg s\) & \(\to\) & \(t)\) \\
+V & V & V & V & V & V & V & V & V & V & F & V & F & F & F & F & V & V\\ 
+V & V & V & V & F & V & V & V & V & V & F & V & F & F & F & F & V & F\\
+V & V & V & F & V & V & V & V & V & V & V & V & V & V & V & V & V & V\\
+V & V & V & F & F & V & V & V & V & V & V & V & V & V & F & V & F & F\\
+V & V & F & V & V & V & F & V & F & F & F & F & V & F & F & F & V & V\\
+V & V & F & V & F & V & F & V & F & F & F & F & V & F & F & F & V & F\\
+V & V & F & F & V & V & F & V & F & F & F & F & V & V & F & V & V & V\\
+V & V & F & F & F & V & F & V & F & F & F & F & V & V & F & V & F & F\\
+V & F & V & V & V & V & V & F & V & V & F & V & F & F & F & F & V & V\\
+V & F & V & V & F & V & V & F & V & V & F & V & F & F & F & F & V & F\\
+V & F & V & F & V & V & V & F & V & V & V & V & V & V & V & V & V & V\\
+V & F & V & F & F & V & V & F & V & V & V & V & V & V & F & V & F & F\\
+V & F & F & V & V & V & V & F & V & F & V & F & V & F & V & F & V & V\\
+V & F & F & V & F & V & V & F & V & F & V & F & V & F & V & F & V & F\\
+V & F & F & F & V & V & V & F & V & F & V & F & V & V & V & V & V & V\\
+V & F & F & F & F & V & V & F & V & F & V & F & V & V & F & V & F & F\\
+F & V & V & V & V & F & F & V & V & V & F & V & F & F & F & F & V & V\\
+F & V & V & V & F & F & F & V & V & V & F & V & F & F & F & F & V & F\\
+F & V & V & F & V & F & F & V & V & V & F & V & F & V & F & V & V & V\\
+F & V & V & F & F & F & F & V & V & V & F & V & V & V & F & V & F & F\\
+F & V & F & V & V & F & F & V & F & F & F & F & V & F & F & F & V & V\\
+F & V & F & V & F & F & F & V & F & F & F & F & V & F & F & F & V & F\\
+F & V & F & F & V & F & F & V & F & F & F & F & V & V & F & V & V & V\\
+F & V & F & F & F & F & F & V & F & F & F & F & V & V & F & V & F & F\\
+F & F & V & V & V & F & F & F & V & V & F & V & F & F & F & F & V & V\\
+F & F & V & V & F & F & F & F & V & V & F & V & F & F & F & F & V & F\\
+F & F & V & F & V & F & F & F & V & V & F & V & V & V & F & V & V & V\\
+F & F & V & F & F & F & F & F & V & V & F & V & V & V & F & V & F & F\\
+F & F & F & V & V & F & F & F & V & F & F & F & V & F & F & F & V & V\\
+F & F & F & V & F & F & F & F & V & F & F & F & V & F & F & F & V & F\\
+F & F & F & F & V & F & F & F & V & F & F & F & V & V & F & V & V & V\\
+F & F & F & F & F & F & F & F & V & F & F & F & V & V & F & V & F & F
+\end{tabular}
+\end{center}
+
+\newpage
+\item Si tienes a buen precio la mercancía, los clientes vendrán más y si vienen más tu ganacias serán mayores.
+\begin{itemize}
+ \item \(p\): Tener la mercancía a buen precio.
+ \item \(q\): Vienen más clientes.
+ \item \(r\): Las ganacias son mayores.
+\end{itemize}
+Pasando la preposición al lenguaje formal tenemos, \( (p \to q) \land (q \to r) \), la tabla de verdad es la siguiente:
+\begin{center}
+\begin{tabular}{llllllllll}
+\(p\) & \(q\) & \(r\) & \((p\) & \(\to\) & \(q)\) & \(\land\) & \((q\) & \(\to\) & \(r)\)\\
+V & V & V & V & V & V & V & V & V & V\\
+V & V & F & V & V & V & F & V & F & F\\
+V & F & V & V & F & F & V & F & V & V\\
+V & F & F & V & F & F & V & F & V & F\\
+F & V & V & F & V & V & V & V & V & V\\
+F & V & F & F & V & V & F & V & F & F\\
+F & F & V & F & V & F & V & F & V & V\\
+V & V & F & F & V & V & V & F & V & F
+\end{tabular}
+\end{center}
+
+\item Si me invita un café, le doy las gracias y un beso, pero únicamente si me dice toma mi amor o mi vida o mi cielo.
+\begin{itemize}
+ \item \(p\): Me invita un café.
+ \item \(q\): Le doy las gracias.
+ \item \(r\): Le doy un beso.
+ \item \(s\): Me dice toma mi amor.
+ \item \(t\): Me dice mi vida.
+ \item \(u\): Me dice mi cielo.
+\end{itemize}
+Así la preposición formulada en lenguaje formal es, \( [(s \lor t) \lor u] \to [p \to (q \land r)]\), con la siguiente tabla de verdad:
+
+\begin{center}
+\begin{longtable}{@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c}
+p & q & r & s & t & u &  & ( & ( & s & $\lor$ & t & ) & $\lor$ & u & ) & $\rightarrow$ & ( & p & $\rightarrow$ & ( & q & $\&$ & r & ) & ) & \\
+T & T & T & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & T &  & T & T & T &  &  & \\
+T & T & F & T & T & T &  &  &  & T & T & T &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & T & T & F &  &  &  & T & T & T &  & T & F &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & T & F & T &  &  &  & T & T & F &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & T & F & F &  &  &  & T & T & F &  & T & F &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & F & T & T &  &  &  & F & T & T &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & F & T & F &  &  &  & F & T & T &  & T & F &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & F & F & T &  &  &  & F & F & F &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
+T & T & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & F &  & T & F & F &  &  & \\
+T & F & T & T & T & T &  &  &  & T & T & T &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & T & T & F &  &  &  & T & T & T &  & T & F &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & T & F & T &  &  &  & T & T & F &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & T & F & F &  &  &  & T & T & F &  & T & F &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & F & T & T &  &  &  & F & T & T &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & F & T & F &  &  &  & F & T & T &  & T & F &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & F & F & T &  &  &  & F & F & F &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
+T & F & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & F &  & F & F & T &  &  & \\
+T & F & F & T & T & T &  &  &  & T & T & T &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & T & T & F &  &  &  & T & T & T &  & T & F &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & T & F & T &  &  &  & T & T & F &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & T & F & F &  &  &  & T & T & F &  & T & F &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & F & T & T &  &  &  & F & T & T &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & F & T & F &  &  &  & F & T & T &  & T & F &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & F & F & T &  &  &  & F & F & F &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
+T & F & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & F &  & F & F & F &  &  & \\
+F & T & T & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & T & T & T &  &  & \\
+F & T & F & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
+F & T & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & T & F & F &  &  & \\
+F & F & T & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & F & F & T &  &  & \\
+F & F & F & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
+F & F & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & F & F & F &  &  & \\
+\end{longtable}
+\end{center}
+
+\item Es un hombre que no siente amor por sus hijos perfiere darle a otros lo que a ellos les niega.
+
+\begin{itemize}
+ \item \(p\): Es un hombre.
+ \item \(q\): No siente amor por sus hijos.
+ \item \(r\): Les da a otros lo que niega a sus hijos.
+\end{itemize}
+
+La preposición en lenguaje formal se expresa como, \((p \land q) \land r\), y su tabla de verdad:
+
+\begin{center}
+\begin{tabular}{llllllll}
+\(p\) & \(q\) & \(r\) & \((p\) & \(\land\) & \(q)\) & \(\land\) & \(r\)\\
+V & V & V & V & V & V & V & V\\
+V & V & F & V & V & V & F & F\\
+V & F & V & V & F & F & F & V\\
+V & F & F & V & F & F & F & F\\
+F & V & V & F & F & V & F & V\\
+F & V & F & F & F & V & F & F\\
+F & F & V & F & F & F & F & V\\
+F & V & F & F & F & V & F & F
+\end{tabular}
+\end{center}
+
+\item Si el gobierno generará más empleos, la gente tendría más dinero y si la gente tiene más dinero, la economía será mejor.
+
+\begin{itemize}
+ \item \(p\): El gobierno genera más empleos
+ \item \(q\): La gente tiene más dinero.
+ \item \(r\): La economía será mejor.
+\end{itemize}
+
+Pasando a lenguaje formal, \((p \to q) \land (q \to r) \), con la siguiente tabla de verdad.
+\begin{center}
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+p & q & r &  & ( & p & $\rightarrow$ & q & ) & $\&$ & ( & q & $\rightarrow$ & r & ) & \\
+T & T & T &  &  & T & T & T &  & T &  & T & T & T &  & \\
+T & T & F &  &  & T & T & T &  & F &  & T & F & F &  & \\
+T & F & T &  &  & T & F & F &  & F &  & F & T & T &  & \\
+T & F & F &  &  & T & F & F &  & F &  & F & T & F &  & \\
+F & T & T &  &  & F & T & T &  & T &  & T & T & T &  & \\
+F & T & F &  &  & F & T & T &  & F &  & T & F & F &  & \\
+F & F & T &  &  & F & T & F &  & T &  & F & T & T &  & \\
+F & F & F &  &  & F & T & F &  & T &  & F & T & F &  & \\
+\end{tabular}
+\end{center}
+
+\end{enumerate}
+\end{document}
