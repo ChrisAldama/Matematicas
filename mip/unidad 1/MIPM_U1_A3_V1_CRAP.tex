@@ -15,7 +15,7 @@
 Instrucciones: Analiza las siguientes proposiciones que surgen de situaciones de la vida cotidiana y utiliza las operaciones proposicionales para expresarlas en un lenguaje lógico y demuestra su valor de verdad. 
 
 \begin{enumerate}
- \item Tengo hambre, pero si como, me va a dar sueño y si me da sueño no voy a poder estudiar y si no estudio no pasaré el examen.
+ \item Vengo hambre, pero si como, me va a dar sueño y si me da sueño no voy a poder estudiar y si no estudio no pasaré el examen.
 \begin{itemize}
  \item \(p\): Yo tengo hambre.
  \item \(q\): Yo como.
@@ -98,70 +98,70 @@ Así la preposición formulada en lenguaje formal es, \( [(s \lor t) \lor u] \to
 \begin{center}
 \begin{longtable}{@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c}
 p & q & r & s & t & u &  & ( & ( & s & $\lor$ & t & ) & $\lor$ & u & ) & $\rightarrow$ & ( & p & $\rightarrow$ & ( & q & $\&$ & r & ) & ) & \\
-T & T & T & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & T &  & T & T & T &  &  & \\
-T & T & F & T & T & T &  &  &  & T & T & T &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & T & T & F &  &  &  & T & T & T &  & T & F &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & T & F & T &  &  &  & T & T & F &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & T & F & F &  &  &  & T & T & F &  & T & F &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & F & T & T &  &  &  & F & T & T &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & F & T & F &  &  &  & F & T & T &  & T & F &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & F & F & T &  &  &  & F & F & F &  & T & T &  & F &  & T & F &  & T & F & F &  &  & \\
-T & T & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & F &  & T & F & F &  &  & \\
-T & F & T & T & T & T &  &  &  & T & T & T &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & T & T & F &  &  &  & T & T & T &  & T & F &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & T & F & T &  &  &  & T & T & F &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & T & F & F &  &  &  & T & T & F &  & T & F &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & F & T & T &  &  &  & F & T & T &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & F & T & F &  &  &  & F & T & T &  & T & F &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & F & F & T &  &  &  & F & F & F &  & T & T &  & F &  & T & F &  & F & F & T &  &  & \\
-T & F & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & F &  & F & F & T &  &  & \\
-T & F & F & T & T & T &  &  &  & T & T & T &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & T & T & F &  &  &  & T & T & T &  & T & F &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & T & F & T &  &  &  & T & T & F &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & T & F & F &  &  &  & T & T & F &  & T & F &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & F & T & T &  &  &  & F & T & T &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & F & T & F &  &  &  & F & T & T &  & T & F &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & F & F & T &  &  &  & F & F & F &  & T & T &  & F &  & T & F &  & F & F & F &  &  & \\
-T & F & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & T & F &  & F & F & F &  &  & \\
-F & T & T & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & T & T & T &  &  & \\
-F & T & F & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & T & F & F &  &  & \\
-F & T & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & T & F & F &  &  & \\
-F & F & T & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & T & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & F & F & T &  &  & \\
-F & F & F & T & T & T &  &  &  & T & T & T &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & T & T & F &  &  &  & T & T & T &  & T & F &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & T & F & T &  &  &  & T & T & F &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & T & F & F &  &  &  & T & T & F &  & T & F &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & F & T & T &  &  &  & F & T & T &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & F & T & F &  &  &  & F & T & T &  & T & F &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & F & F & T &  &  &  & F & F & F &  & T & T &  & T &  & F & T &  & F & F & F &  &  & \\
-F & F & F & F & F & F &  &  &  & F & F & F &  & F & F &  & T &  & F & T &  & F & F & F &  &  & \\
+V & V & V & V & V & V &  &  &  & V & V & V &  & V & V &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & V & V & F &  &  &  & V & V & V &  & V & F &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & V & F & V &  &  &  & V & V & F &  & V & V &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & V & F & F &  &  &  & V & V & F &  & V & F &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & F & V & V &  &  &  & F & V & V &  & V & V &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & F & V & F &  &  &  & F & V & V &  & V & F &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & F & F & V &  &  &  & F & F & F &  & V & V &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & V & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & V & V &  & V & V & V &  &  & \\
+V & V & F & V & V & V &  &  &  & V & V & V &  & V & V &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & V & V & F &  &  &  & V & V & V &  & V & F &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & V & F & V &  &  &  & V & V & F &  & V & V &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & V & F & F &  &  &  & V & V & F &  & V & F &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & F & V & V &  &  &  & F & V & V &  & V & V &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & F & V & F &  &  &  & F & V & V &  & V & F &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & F & F & V &  &  &  & F & F & F &  & V & V &  & F &  & V & F &  & V & F & F &  &  & \\
+V & V & F & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & V & F &  & V & F & F &  &  & \\
+V & F & V & V & V & V &  &  &  & V & V & V &  & V & V &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & V & V & F &  &  &  & V & V & V &  & V & F &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & V & F & V &  &  &  & V & V & F &  & V & V &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & V & F & F &  &  &  & V & V & F &  & V & F &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & F & V & V &  &  &  & F & V & V &  & V & V &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & F & V & F &  &  &  & F & V & V &  & V & F &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & F & F & V &  &  &  & F & F & F &  & V & V &  & F &  & V & F &  & F & F & V &  &  & \\
+V & F & V & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & V & F &  & F & F & V &  &  & \\
+V & F & F & V & V & V &  &  &  & V & V & V &  & V & V &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & V & V & F &  &  &  & V & V & V &  & V & F &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & V & F & V &  &  &  & V & V & F &  & V & V &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & V & F & F &  &  &  & V & V & F &  & V & F &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & F & V & V &  &  &  & F & V & V &  & V & V &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & F & V & F &  &  &  & F & V & V &  & V & F &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & F & F & V &  &  &  & F & F & F &  & V & V &  & F &  & V & F &  & F & F & F &  &  & \\
+V & F & F & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & V & F &  & F & F & F &  &  & \\
+F & V & V & V & V & V &  &  &  & V & V & V &  & V & V &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & V & V & F &  &  &  & V & V & V &  & V & F &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & V & F & V &  &  &  & V & V & F &  & V & V &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & V & F & F &  &  &  & V & V & F &  & V & F &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & F & V & V &  &  &  & F & V & V &  & V & V &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & F & V & F &  &  &  & F & V & V &  & V & F &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & F & F & V &  &  &  & F & F & F &  & V & V &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & V & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & F & V &  & V & V & V &  &  & \\
+F & V & F & V & V & V &  &  &  & V & V & V &  & V & V &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & V & V & F &  &  &  & V & V & V &  & V & F &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & V & F & V &  &  &  & V & V & F &  & V & V &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & V & F & F &  &  &  & V & V & F &  & V & F &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & F & V & V &  &  &  & F & V & V &  & V & V &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & F & V & F &  &  &  & F & V & V &  & V & F &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & F & F & V &  &  &  & F & F & F &  & V & V &  & V &  & F & V &  & V & F & F &  &  & \\
+F & V & F & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & F & V &  & V & F & F &  &  & \\
+F & F & V & V & V & V &  &  &  & V & V & V &  & V & V &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & V & V & F &  &  &  & V & V & V &  & V & F &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & V & F & V &  &  &  & V & V & F &  & V & V &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & V & F & F &  &  &  & V & V & F &  & V & F &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & F & V & V &  &  &  & F & V & V &  & V & V &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & F & V & F &  &  &  & F & V & V &  & V & F &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & F & F & V &  &  &  & F & F & F &  & V & V &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & V & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & F & V &  & F & F & V &  &  & \\
+F & F & F & V & V & V &  &  &  & V & V & V &  & V & V &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & V & V & F &  &  &  & V & V & V &  & V & F &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & V & F & V &  &  &  & V & V & F &  & V & V &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & V & F & F &  &  &  & V & V & F &  & V & F &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & F & V & V &  &  &  & F & V & V &  & V & V &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & F & V & F &  &  &  & F & V & V &  & V & F &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & F & F & V &  &  &  & F & F & F &  & V & V &  & V &  & F & V &  & F & F & F &  &  & \\
+F & F & F & F & F & F &  &  &  & F & F & F &  & F & F &  & V &  & F & V &  & F & F & F &  &  & \\
 \end{longtable}
 \end{center}
 
@@ -201,14 +201,14 @@ Pasando a lenguaje formal, \((p \to q) \land (q \to r) \), con la siguiente tabl
 \begin{center}
 \begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
 p & q & r &  & ( & p & $\rightarrow$ & q & ) & $\&$ & ( & q & $\rightarrow$ & r & ) & \\
-T & T & T &  &  & T & T & T &  & T &  & T & T & T &  & \\
-T & T & F &  &  & T & T & T &  & F &  & T & F & F &  & \\
-T & F & T &  &  & T & F & F &  & F &  & F & T & T &  & \\
-T & F & F &  &  & T & F & F &  & F &  & F & T & F &  & \\
-F & T & T &  &  & F & T & T &  & T &  & T & T & T &  & \\
-F & T & F &  &  & F & T & T &  & F &  & T & F & F &  & \\
-F & F & T &  &  & F & T & F &  & T &  & F & T & T &  & \\
-F & F & F &  &  & F & T & F &  & T &  & F & T & F &  & \\
+V & V & V &  &  & V & V & V &  & V &  & V & V & V &  & \\
+V & V & F &  &  & V & V & V &  & F &  & V & F & F &  & \\
+V & F & V &  &  & V & F & F &  & F &  & F & V & V &  & \\
+V & F & F &  &  & V & F & F &  & F &  & F & V & F &  & \\
+F & V & V &  &  & F & V & V &  & V &  & V & V & V &  & \\
+F & V & F &  &  & F & V & V &  & F &  & V & F & F &  & \\
+F & F & V &  &  & F & V & F &  & V &  & F & V & V &  & \\
+F & F & F &  &  & F & V & F &  & V &  & F & V & F &  & \\
 \end{tabular}
 \end{center}
 
