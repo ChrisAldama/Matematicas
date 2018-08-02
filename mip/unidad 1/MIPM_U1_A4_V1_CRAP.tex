@@ -1,0 +1,85 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\input{fitch}
+
+%opening
+\title{Actividad 4. Reglas de inferencia y premisas}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\section{Reglas de Inferencia}
+Instrucciones: Utiliza las reglas de inferencia para demostrar la conclusión que se pide, justifica tu respuesta.
+
+\begin{enumerate}
+ \item En la escuela Juan tuvo 10 de promedio en matemáticas o 10 de promedio en física, si Juan tuvo 10 de promedio en matemáticas entonces se ganará un viaje y si Juan tuvo 10 de promedio en física entonces se ganará un viaje, lo anterior es suficiente para que Juan se ganará un viaje.\\
+ Pasando las preposiciones a lenguaje formal:
+ \begin{itemize}
+  \item \(p\): Juan tuvo 10 de promedio en matemáticas
+  \item \(q\): Juan tuvo 10 de prmiedio en física.
+  \item \(r\): Juan se ganará un viaje.
+ \end{itemize}
+Luego usando las reglas de inferencia tenemos que probar que \(r\):
+\[
+\begin{nd}
+  \hypo {1} {p \lor q}
+  \hypo {2} {p \to r}
+  \hypo {3} {q \to r}
+  \have {4} {r \lor r} \by{DC}{1,2,3}
+  \have {5} {r} \by{LSD}{4}
+\end{nd}
+\]
+
+\item Si vendo muchas mercancía, entonces tendré mucho dinero y no es cierto que tengo mucho dinero, quiere decir que no vendo mucha mercancía.\\
+Pasando las preposiciones a lenguaje formal:
+\begin{itemize}
+ \item \(p\): Vendo mucha mercancía.
+ \item \(q\): Tengo mucho dinero.
+\end{itemize}
+Luago usando las reglas de inferencia tenemos que probar que \(\neg p\).
+\[
+ \begin{nd}
+   \hypo {1} {p \to q}
+   \hypo {2} {\neg q}
+   \have {3} {\neg p} \by{MTT}{1, 2}
+ \end{nd}
+\]
+
+\item Si ganas la olimpiada tus compañeros de escuela se ponen alegres, y si tus compañeros están alegres tus adversarios se ponen tristes, nos encontramos, en consecuencia que si tú ganas la olimpiada. tus adversarios se ponen tristes.\\
+Pasando las preposiciones a lenguaje formal:
+\begin{itemize}
+ \item \(p\): Ganas la olimpiada.
+ \item \(q\): Tus compañeros de la escuela están alegres.
+ \item \(r\): Tus adversarios están trsites.
+\end{itemize}
+Luego usando las reglas de inferencia tenemos que probar que \(p \to r\).
+\[
+ \begin{nd}
+   \hypo {1} {p \to q}
+   \hypo {2} {q \to r}
+   \have {3} {p \to r} \by{SH}{1,2}
+ \end{nd}
+\]
+\item Si invierto más dinero en un negocio, entonces aumentarán mis ganancias, como es cierto que invito más dinero, concluyo que aumentarán mis ganancias.\\
+Pasando las preposiciones a lenguaje formal:
+\begin{itemize}
+ \item \(p\): Invierto más dinero.
+ \item \(q\): Aumentan mis ganancias.
+\end{itemize}
+Luego usando las reglas de inferencia tenemos que probar que \(q\).
+\[
+ \begin{nd}
+  \hypo {1} {p \to q}
+  \hypo {2} {p}
+  \have {3} {q} \by{MPP}{1, 3}
+ \end{nd}
+\]
+
+\end{enumerate} 
+
+
+
+
+\end{document}
