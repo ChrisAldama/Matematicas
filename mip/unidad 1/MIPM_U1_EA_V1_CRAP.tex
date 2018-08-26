@@ -1,0 +1,82 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\input {fitch}
+
+%opening
+\title{Evidencia de Aprenduzaje. Unidad 1}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+ \item De a cuerdo a la siguiente operación con proposiciones blueacte un problema con el cual cumpla con las preposiciones simples p, q, r y verifique la operación siguiente.
+ \[[(p \to q) \land (q \to r)] \to (p \to r)\]
+ Sean:
+ \begin{itemize}
+  \item \(p\): Ahorro dinero
+  \item \(q\): Vengo dinero
+  \item \(r\): Compro un departamento
+ \end{itemize}
+ De tal forma que "Si ahorro dinero entonces tengo dinero y si tengo dinero puedo comprar un departamento, entonces Si ahorro dinero entonces puedo comprar un departamento", asi pues:
+ \[
+  \begin{nd}
+   \hypo {1} {p \to q}
+   \hypo {2} {q \to r}
+   \have {3} {\neg p \lor q} \by{EI}{1}
+   \have {4} {\neg p \lor p}
+   \have {5} {\neg p \land (p \lor q)} \by{LD}{4, 1}
+   \have {6} {\neg p} \by{LCI}{5}
+   \have {7} {\neg r \lor r}
+   \have {8} {r \land (\neg q \lor \neg r)} \by{LD}{7, 2}
+   \have {9} {r} \by{LCI}{8}
+   \have {10} {\neg p \lor r} \by{ID}{6, 9}
+   \have {11} {p \to r} \by{EI}{10}
+  \end{nd}
+ \]
+
+\item Sean \(p, q, r\) tres preposiciones simples dadas como sigue:
+\begin{itemize}
+ \item \(p\): Iván estudia.
+ \item \(q\): Iván juega fútbol.
+ \item \(r\): Iván aprueba el semestre
+\end{itemize}
+Identifica las premisas y su conclusión y demuestra por medio de tabla de verdad si es tautología o contradicción.
+
+ \[[(p \to q) \land (q \to r)] \to (p \to r)\]
+ 
+\begin{tabular}{@{ }c@{ }@{ }c@{ }@{ }c | c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+p & q & r &  & ( & ( & p & $\rightarrow$ & q & ) & $\&$ & ( & q & $\rightarrow$ & r & ) & ) & $\rightarrow$ & ( & p & $\rightarrow$ & r & ) & \\
+\hline 
+V & V & V &  &  &  & V & V & V &  & V &  & V & V & V &  &  & \textcolor{blue}{V} &  & V & V & V &  & \\
+V & V & F &  &  &  & V & V & V &  & F &  & V & F & F &  &  & \textcolor{blue}{V} &  & V & F & F &  & \\
+V & F & V &  &  &  & V & F & F &  & F &  & F & V & V &  &  & \textcolor{blue}{V} &  & V & V & V &  & \\
+V & F & F &  &  &  & V & F & F &  & F &  & F & V & F &  &  & \textcolor{blue}{V} &  & V & F & F &  & \\
+F & V & V &  &  &  & F & V & V &  & V &  & V & V & V &  &  & \textcolor{blue}{V} &  & F & V & V &  & \\
+F & V & F &  &  &  & F & V & V &  & F &  & V & F & F &  &  & \textcolor{blue}{V} &  & F & V & F &  & \\
+F & F & V &  &  &  & F & V & F &  & V &  & F & V & V &  &  & \textcolor{blue}{V} &  & F & V & V &  & \\
+F & F & F &  &  &  & F & V & F &  & V &  & F & V & F &  &  & \textcolor{blue}{V} &  & F & V & F &  & \\
+\end{tabular}
+
+\item Si Julieta se casa, es porque consiguió el préstamo, Julieta consiguió el préstamo, por lo tanto Julieta se casará.\\
+Demuestre si es tautología o contradicción por medio de tabla de verdad.
+\begin{itemize}
+ \item \(p\): Julieta de casa.
+ \item \(q\): Julieta consiguió el préstamo.
+\end{itemize}
+
+\[(p \to q) \land (q \to p)\]
+
+\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+p & q &  & ( & p & $\rightarrow$ & q & ) & $\&$ & ( & q & $\rightarrow$ & p & ) & \\
+\hline 
+V & V &  &  & V & V & V &  & \textcolor{blue}{V} &  & V & V & V &  & \\
+V & F &  &  & V & F & F &  & \textcolor{red}{F} &  & F & V & V &  & \\
+F & V &  &  & F & V & V &  & \textcolor{red}{F} &  & V & F & F &  & \\
+F & F &  &  & F & V & F &  & \textcolor{blue}{V} &  & F & V & F &  & \\
+\end{tabular}
+
+\end{enumerate}
+\end{document}

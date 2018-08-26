@@ -1,0 +1,89 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsfonts}
+%opening
+\title{Actividad 2}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\section{Realiza las siguientes demostraciones}
+
+\begin{enumerate}
+ \item Demuestre que si el triángulo XYZ de catetos x e y e hipotenusa z tiene de área \( \dfrac{z^{2}}{4} \), entonces es isósceles.
+   \begin{proof}
+     Sea \( x = y\) ya que el triángulo es isósceles.
+     \begin{align*}
+       z^{2} &= x^{2} + y^{2}               \tag*{Teorema de pitágoras}
+       \\ &= 2x^{2}                         \tag*{Sustituyendo $y = x$}
+       \\ x^{2} &= \dfrac{z^{2}}{2}         \tag*{Despejando $x^{2}$}
+       \\                                   \tag{Por otro lado}
+       \\ A &= \dfrac{xy}{2}                \tag*{Área de un triángulo}
+       \\ &= \dfrac{x^{2}}{2}               \tag*{Sustituyendo $y = x$}
+       \\ &= \dfrac{z^2}{2\times2}    \tag*{Sustituyendo $x^{2}$}
+       \\ &= \dfrac{z^{2}}{4}               &&\qedhere
+    \end{align*}
+   \end{proof}
+   
+  \item Demostrar que $1^3 + 2^3 + 3^3 + ... + n^3 = (1 + 2 + 3 + ... + n)^2$
+    \begin{proof}
+      Pasando las series a notación de sumatoria tenemos que: \[\sum_{1}^{n} k^3 = (\sum_{1}^{n} k)^2\] Evaluando $L(1)$, $L(2)$ $L(h)$ y $L(h+1)$ tenemos que:
+       \begin{align*}
+       L(1)&=\sum_{1}^{1} k^3
+       \\ &= 1
+       \\ &= (\sum_{1}^{1} k)^2
+       \\ L(2) &= \sum_{1}^{2} k^3
+       \\ &= (1 + 8)
+       \\ &= (1 + 2)^2
+       \\ &= (\sum_{1}^{2} k)^2
+       \\ L(h)&=\sum_{1}^{h} k^3 
+       \\ &= (\sum_{1}^{h} k )^2            \tag*{Suposición}
+       \\ L(h+1) &= \sum_{1}^{h+1} k^3
+       \\ &= \sum_{1}^{h} k^3 + (h + 1)^3    \tag*{Cambiando límite de sumatoria}
+       \\ &= (\sum_{1}^{h} k )^2 + (h + 1)^3 \tag*{Inducción}
+       \\ &= [\dfrac{h(h + 1)}{2}]^2 + (h + 1)^3 \tag*{Fórmula de Gauss}
+       \\ &= \dfrac{1}{4}(h^4 + 6h^3 + 13h^2 + 12h + 4) \tag*{Desarrollando potencias}
+       \\ &= \dfrac{1}{4}(h^2 + 3h + 2)^2       \tag*{Reagrupando}
+       \\ &= [\dfrac{(h+1)(h+1+1)}{2}]^2        \tag*{Fórmula de Gauss}
+       \\ &= (\sum_{1}^{h+1} k)^2            &&\qedhere
+       \end{align*}
+    \end{proof}
+    
+  \item Demuestra la negación del siguiente enunciado: la suma de dos números compuestos siempre es un número compuesto.
+  \begin{proof}
+    La negación es: la suma  de dos números compuestos no siempre es un número compuesto. Sean 4 y 9 dos números compuestos
+    \begin{align*}
+    4 &= 2 \times 2
+    \\ 9 &= 3 \times 3
+    \\ 4 + 9 &= 13 \in \mathbb{P} &&\qedhere
+    \end{align*}
+  \end{proof}
+  
+  \item Demuestre que para cada entero $n$, que si $5n + 3$ es par, entonces $n$ es impar.
+    \begin{proof}
+     Demostrando la contraposición, podemos reformular como: si $n$ es par, etonces $5n + 3$ es impar.
+     \begin{align*}
+        n &= 2k             \tag*{Ya que n es par}
+        \\ 5n + 3 &= 5(2k) + 3     \tag*{Sustituyendo $n=2k$}
+        \\ &= 2h + 3        \tag*{Sustituyendo $h=5k$}
+        \\ &= 2(h+1) + 1    \tag*{Refactorizando}
+        \\ &= 2j + 1        \tag*{Sustituyendo $j=h+1$}  
+        \\ &&\qedhere
+     \end{align*}
+    \end{proof}
+    
+  \item Demuestre que si $n \in \mathbb{Z}$, entonces, $n^2 -3$ es multíplo de 4.
+  \begin{proof}
+    Esta preposición es falsa y se puede demonstrar su falsedad con un contra ejemplo:
+    \begin{align*}
+        1 &\in \mathbb{Z}
+        \\ n &= 1
+        \\ n^2 - 3 &= 2 - 3     \tag*{Sustituyendo n=1}
+        \\ &= -1                &&\qedhere
+    \end{align*}
+  \end{proof}
+\end{enumerate}
+\end{document}
