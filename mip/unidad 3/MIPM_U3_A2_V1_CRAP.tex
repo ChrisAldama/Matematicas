@@ -1,0 +1,91 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{venndiagram}
+
+%opening
+\title{Actividad 2 Unidad 3}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\section{Operaciones con conjuntos}
+
+\begin{enumerate}
+ \item Define por extensión cada uno de los siguientes conjuntos:
+ \begin{enumerate}[label=(\alph*)]
+  \item $ \{ x / x $ es un número entero que verifica $3 < x < 4 \} $
+  \\ $ A = \emptyset $
+  
+  \item $\{ x / x $ es entero positivo múltiplo de 3 $\}$
+  \\ $A=\{3, 6, 9, 12, ... \}$
+  
+  \item $\{x \in \mathbb{R}/ (3x + 1)(x+2) = 0 \}$
+  \\ $A=\{-2, -\dfrac{1}{3} \}$
+  
+  \item $\{x / x$ es un número entero que es la solución de la ecuación $(3x - 1)(x + 2) = 0\}$
+  \\ $A=\{-2\}$
+  
+  \item $\{x/2x$ es entero positivo $\}$
+  \\ $A=\mathbb{N}$
+  
+  \item $\{n/n \in \mathbb{Z}, 3 < n < 7\}$
+  \\ $A=\{4, 5, 6\}$
+  
+  \item $\{x/x \in \mathbb{R}, x < 1 \land x >= 1 \}$
+  \\ $A=\mathbb{R}$
+ \end{enumerate}
+ 
+ \item Dados los siguientes conjuntos, construye conjuntos que sea resultado de la unión, intersección, diferencia, complemento y represe mediante un diagrama de Venn - Euler.
+ \\ Sea $U = \{1, 2, 3, ... , 12\}$
+ \\ $A = \{1, 3, 5, 7, 9, 11\}$
+ \\ $B = \{2, 3, 5, 7, 11\}$
+ \\ $C = \{2, 3, 6, 12\}$
+ \\ $D = \{2, 4, 8\}$
+ \\ Determina los conjuntos:
+ 
+ \newpage
+ \begin{enumerate}[label=(\alph*)]
+  \item $A \cup B = \{1, 2, 3, 5, 7, 9, 11\}$
+  \\ \begin{venndiagram2sets}
+    \fillA
+    \fillB
+  \end{venndiagram2sets}
+  \item $A \cap B = \{3, 5, 7\}$
+   \\ \begin{venndiagram2sets}
+    \fillACapB
+  \end{venndiagram2sets}
+  
+  \item $(A \cup B) \cap C^c = \{1, 5, 7, 9, 11\}$
+  \\ \begin{venndiagram3sets}
+      \fillANotC
+      \fillBNotC
+     \end{venndiagram3sets}
+     
+  \item $A - B= \{ 1, 9\}$
+  \\ \begin{venndiagram2sets}
+      \fillANotB
+     \end{venndiagram2sets}
+     
+  \item $C-D = \{3, 6, 12\}$
+   \\ \begin{venndiagram2sets}[labelA=$C$, labelB=$D$]
+      \fillANotB
+     \end{venndiagram2sets}
+  \item $(B - D) \cup (D - B) = \{3, 5, 7, 11\} - \{4, 8\} = \{3, 5, 7, 11\}$
+  \\ \begin{venndiagram2sets}[labelA=$B$, labelB=$D$]
+      \fillANotB
+     \end{venndiagram2sets}
+ \end{enumerate}
+\item Realiza lassiguientes operaciones:
+ \begin{enumerate}[label=(\alph*)]
+   \item $(\mathbb{Z}-\mathbb{N})\cap(\mathbb{I}-\mathbb{Q})\cup\mathbb{Q} 
+    = \mathbb{Z^-} \cap \emptyset \cup\mathbb{Q} = \mathbb{Q}$
+  \item $(\mathbb{I}\cup\mathbb{I}^c) \cap \mathbb{Q} = \mathbb{Q}$
+  \item $[(\mathbb{R}-\mathbb{Q})\cap\mathbb{R}^2]^c\cup\mathbb{N} = \emptyset^c \cup \mathbb{N}=\mathbb{U}$
+ \end{enumerate}
+\end{enumerate}
+\end{document}
