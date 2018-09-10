@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{color}
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+ \item Defina con ejemplos simples la tautología y contradicción.
+ \\ Una tautología es una preposición que siempre es cierta, por ejemplo: "$1+1=2$" ya que sin importar quien lo diga, o el contexto siempre es verdad.
+ \\ Una contradicción, en cambio siempre es falsa, por ejemplo: "los seres humanos pueden respirar naturalmente bajo el agua", lo cual es mentira.
+ 
+ \item Para cada una de las preposiciones compuestas construya la tabla de verdad.
+\begin{enumerate}[label=\alph*]
+ \item $(p\to q)\lor(\neg p\to q)$
+ \\\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+p & q &  & ( & p & $\rightarrow$ & q & ) & $\lor$ & ( & $\neg$ & p & $\rightarrow$ & q & ) & \\
+\hline 
+V & V &  &  & V & V & V &  & \textcolor{red}{V} &  & F & V & V & V &  & \\
+V & F &  &  & V & F & F &  & \textcolor{red}{V} &  & F & V & V & F &  & \\
+F & V &  &  & F & V & V &  & \textcolor{red}{V} &  & V & F & V & V &  & \\
+F & F &  &  & F & V & F &  & \textcolor{red}{V} &  & V & F & F & F &  & \\
+\end{tabular}
+
+\item $(p\to q)\land(\neg p\to q)$
+\\\begin{tabular}{@{ }c@{ }@{ }c | c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c@{ }@{}c@{}@{ }c@{ }@{ }c@{ }@{ }c@{ }@{ }c@{ }@{}c@{}@{ }c}
+p & q &  & ( & p & $\rightarrow$ & q & ) & $\land$ & ( & $\neg$ & p & $\rightarrow$ & q & ) & \\
+\hline 
+V & V &  &  & V & V & V &  & \textcolor{red}{V} &  & F & V & V & V &  & \\
+V & F &  &  & V & F & F &  & \textcolor{red}{F} &  & F & V & V & F &  & \\
+F & V &  &  & F & V & V &  & \textcolor{red}{V} &  & V & F & V & V &  & \\
+F & F &  &  & F & V & F &  & \textcolor{red}{F} &  & V & F & F & F &  & \\
+\end{tabular}
+\end{enumerate}
+
+\item Demuestre que si $n$ es un entero positivo cualquiera, entonces.
+\\$\dfrac{1}{3}(n^3 + 2n)$
+\begin{proof}
+ Usando el método de demostracióm por inducción, suponemos que $\dfrac{1}{3}(n^3 + 2n)$ es un número entero. Despues evaluamos.
+ \begin{align*}
+ L(1) &= \dfrac{1}{3}(0^3 + 2(0))
+ \\&= 0
+ \\L(2)&=\dfrac{1}{3}(2^3 + 2(2))
+ \\&=4
+ \\L(k)&=\dfrac{1}{3}(k^3 + 2k) \tag*{Suposición}
+ \\L(k+1)&=\dfrac{1}{3}[(k+1)^3 + 2(k+1)]
+ \\&=\dfrac{1}{3}(k^3+3k^3+5k+3) \tag*{Desarrollando el cubo}
+ \\&=\dfrac{1}{3}(k^3+2k) + \dfrac{1}{3}(3k^2+3k+3) \tag*{Agrupando}
+ \\&=\dfrac{1}{3}(k^3+2k) + (k^2+k+1) \qedhere
+ \end{align*}
+\end{proof}
+
+\item Para el siguiente enunciado en los que $A,B,C$ y $D$ son conjuntos arbitrarios, compruebe que es verdadero o dé un contrajemplo para establecer que es falso.
+\\$A\cup C=B\cup C\to A=B$
+\\Contra ejemplo:
+\\ Sean $A=\{1\}$, $B=\{1,2\}$ y $C=\{2\}$
+\\ $A\cup C=\{1,2\}$
+\\ $B\cup C=\{1,2\}$
+\\pero $A\neq B$
+
+\item Para el siguiente enunciado en los que $A,B,C$ y $D$ son conjuntos arbitrarios, compruebe que es verdadero o dé un contrajemplo para establecer que es falso.
+\\$A-(B\times C)=(A-B)\times(A-C)$
+\\Contra ejemplo:
+\\Sean $A=\{1\}$, $B=\{2\}$ y $C=\{3\}$
+\\ $A-(B\times C) = \{1\} - \{(2,3)\} = \{1\}$
+\\$(A-B)\times (A-C)=(\{1\}-\{2\})\times(\{1\}-\{3\})=\{(1,1)\}$
+
+\end{enumerate}
+\end{document}
