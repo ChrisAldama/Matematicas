@@ -1,0 +1,97 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+
+%opening
+\title{Actividad 3 Unidad 3}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\section{Demostraciones por medio de conjuntos}
+
+\begin{enumerate}
+ \item Contesta lo que se te pide:
+ \\En una encuesta realizada a 125 personas respecto a su género de película favorito se obtuvierton los siguintes datos: a 40 les gusta el drama, a 47 las de comedia y a 56 las de acción.
+ \\Adicionalmete, se sabe que a 18 les gusta las de drama y comedia, a 20 las de comedia y acción, a 22 drama y acción y finalmete a 12 les gustan los tres géneros. Sean:
+   \\ $A = \{$les gusta el Drama$\}$ y $|A| = 40$
+   \\ $B = \{$les gusta las de comedia$\}$ y $|B| = 47$
+   \\ $C = \{$les gusta las de acción$\}$ y $|C| = 56$
+    
+  \begin{enumerate}[label=\alph*]
+   \item ¿A cuántas personas les gusta un solo género
+   \\ Contamos la unión de todas las personas que les gusta algún género y restamos a las que les gusta más de uno.
+   \\Sabiendo que: $|A\cup B\cup C| = |A|+|B|+|C|-|A\cap B|-|A\cap C|-|B\cap C| + |A\cap B\cap C|$
+   \\ Podemos calcular las personas que solo gustan de un sólo género como:
+   \\ $|A|+|B|+|C|-2|A\cap B|-2|A\cap C|-2|B\cap C| + 2|A\cap B\cap C| =$
+   \\ $40 + 47 + 56 - 36 - 40 - 44 + 24 = 47$
+   \item ¿A cuántas personas no les gusta ninguno de los géneros encuestados?.
+   \\ $|U|-|A\cup B\cup C| =$
+   \\ $125-(40+47+56-18-20-22+12)=30$
+  \end{enumerate}
+\item Utiliza las leyes de álgebra de conjuntos para demostrar lo que se pide, justifica tu respuesta.
+\begin{enumerate}[label=\alph*]
+ \item $(A\cup B)\cap(A\cup\emptyset)=A$
+ \begin{proof}
+  \begin{align*}
+ (A\cup B)\cap(A\cup\emptyset)&=
+ \\(A\cup B)\cap A&=
+ \\(A\cap A)\cup(A\cap B)&=
+ \\A\cup(A\cap B) &= A \iff (A\cap B)=\emptyset
+  \end{align*}
+ \end{proof}
+ 
+ \item $A-(A\cap B)=A-B$
+ \begin{proof}
+  \begin{align*}
+  A-(A\cap B)&=
+  \\A-A\cup A-B&=
+  \\\emptyset\cup A-B&=A-B
+  \end{align*}
+ \end{proof}
+ 
+ \item $(A-B)\cap(B-A)=\emptyset$
+ \begin{proof}
+  \begin{align*}
+  (A-B)\cap(B-A)&=
+  \\(A\cap B^c)\cap(B\cap A^c) &=
+  \\(A\cap A^c)\cap(B\cap B^c) &= \emptyset
+  \end{align*}
+ \end{proof}
+\item $A-(B\cup C)=(A-B)\cap(A-C)$
+ \begin{proof}
+  \begin{align*}
+    A-(B\cup C)&=
+    \\A\cap(B\cup C)^c&=
+    \\A\cap B^c\cap C^c&=
+    \\(A\cap B^c)\cap(A\cap C^c) &= (A-B)\cap(A-C)
+  \end{align*}
+ \end{proof}
+\end{enumerate}
+\item Demuestre: $B-A=B\cap A^c$, Así la diferencia se escribe en términos de las operaciones de intersección y complemento.
+\begin{proof}
+ \begin{align*}
+ B-A &=
+ \\\{x|x\in B\land x\notin A\} &= 
+ \\\{x|x\in B\}\land\{x|\notin A\}&=B\cap A^c \qedhere
+ \end{align*} 
+\end{proof}
+
+\item si $A, B$ y $C$ son conjuntos, demuestre tanto analítica como gráficamente que 
+\\$A\cap(B-C)=(A\cap B)-(A\cap C)$
+\begin{proof}
+ \begin{align*}
+ A\cap(B-C)&=
+ \\A\cap B\cap C^c&= \tag*{Equivalencia de diferencia}
+ \\(A\cap B\cap C^c)\cup(A\cap A^c\cap B) &= \tag*{Sabiendo que $A\cap A^c = \emptyset$ y $A\cup\emptyset = A$}
+ \\(A\cap B)\cap(A^c\cup C^c)&= \tag*{Refactorizando $A\cap B$}
+ \\(A\cap B)\cap(A\cap C)^c&= \tag*{Ley de Morgan}
+ \\A(\cap B)-(A\cap C) &&\qedhere
+ \end{align*} 
+\end{proof}
+\end{enumerate}
+\end{document}

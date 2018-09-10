@@ -1,0 +1,90 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsfonts}
+
+
+%opening
+\title{Actividad 3 Unidad 3}
+\author{Cristopher Aldama Pérez}
+
+\begin{document}
+
+\maketitle
+
+\section{Demostraciones por medio de conjuntos}
+
+\begin{enumerate}
+ \item Para cualesquiera dos conjuntos $A$ y $B$, demuestra que:
+ \\ $A \subseteq B \iff A - B = \emptyset $
+ \begin{proof}
+  \begin{align*}
+  A \subseteq B &\to
+  \\ x \in A \land x \in B &\to
+  \\A - B &= \emptyset \tag*{Ya que no todos los elementos A estan en B}
+  \\A \subseteq B &\to A - B = \emptyset \tag{1}
+  \\A - B = \emptyset&\to \tag*{Por otro lado}
+  \\x \in A \land x \notin B = \emptyset&\to
+  \\ x \in A \land x \in B&\to     \tag*{Ya que la resta $A - B = \emptyset$}
+  \\ A \subseteq B
+  A - B = \emptyset &\to A \subseteq B \tag{2}
+  \\(A \subseteq B \to A - B = \emptyset) &\land (A - B = \emptyset \to A \subseteq B) \tag*{de 1 y 2}
+  \\A \subseteq B &\iff A - B = \emptyset \qedhere
+  \end{align*}
+ \end{proof}
+
+ \item Para cualesquiera 2 conjuntos $A$ y $B$ demostrar que:
+ \\ $(A \cup B)^c = A^c \cap B^c$
+\begin{proof}
+  \begin{align*}
+  (A \cup B)^c &=
+  \\ \neg[(x \in A) \lor (x \in B)] &=
+  \\ \neg(x \in A) \land \neg(x\in B) &=
+  \\ x \notin A \land x \notin B &=
+     A^c \cap B^c \qedhere
+  \end{align*}
+ \end{proof}
+ $(A \cap B)^c = A^c \cup B^c $
+\begin{proof}
+  \begin{align*}
+  (A \cap B)^c &=
+  \\ \neg[(x \in A) \land (x \in B)] &=
+  \\ \neg(x \in A) \lor \neg(x\in B) &=
+  \\ x \notin A \lor x \notin B &=
+     A^c \cup B^c \qedhere
+  \end{align*}
+ \end{proof}
+ 
+ \item Para cualesquiera 3 conjuntos $A$, $B$ y $C$, demuestra que
+ \\ $A \cup ( B \cap C) = (A\cup B)\cap(A\cup C) $
+ \begin{proof}
+  \begin{align*}
+    A\cup(B\cap C) &=
+    \\x\in A \lor(x\in B\land x\in C) &=
+    \\(x\in A\lor x\in B)\land(x\in A\lor x\in C) &= 
+    (A\cup B)\cap(A\cup C) \qedhere
+  \end{align*}
+ \end{proof}
+ $A \cap ( B \cup C) = (A\cap B)\cup(A\cap C) $
+ \begin{proof}
+  \begin{align*}
+    A\cap(B\cup C) &=
+    \\x\in A \land(x\in B\lor x\in C) &=
+    \\(x\in A\land x\in B)\lor(x\in A\land x\in C) &= 
+    (A\cap B)\cup(A\cap C) \qedhere
+  \end{align*}
+ \end{proof}
+ \item Para cualesquiera conjuntos $A$ y $B$, 
+ \\ Si $A \subseteq B \to p(A) \subseteq p(B) $
+ \begin{proof}
+  \begin{align*}
+   p(A) = \{x| x \subset A\}
+   \\x\in p(A) \tag*{Sea x un elemento cualquiera de $p(A)$}
+   \\x \subseteq A \tag*{Definicion de $p(A)$}
+   \\x \subseteq B \tag*{Ya que $A\subseteq B$}
+   \\x \in p(B) \tag*{Definicion de p(B)}
+   \\ p(A)\subseteq p(B) &&\qedhere
+  \end{align*}
+ \end{proof}
+\end{enumerate}
+\end{document}
